@@ -363,7 +363,12 @@ function importy(file=0) {
 
   } else {
   let loadgame = "";
-  loadgame = JSON.parse(atob(prompt("Paste in your save WARNING: WILL OVERWRITE YOUR CURRENT SAVE")));
+  const inputText = prompt("Paste in your save WARNING: WILL OVERWRITE YOUR CURRENT SAVE")
+  if (inputText === null || inputText === "") {
+    // just cancelled
+    return;
+  }
+  loadgame = JSON.parse(atob(inputText));
   if (loadgame !== "") {
     loadGame(loadgame);
     $.notify("Import Successful!","success")
