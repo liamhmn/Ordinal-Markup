@@ -293,6 +293,7 @@ function loadGame(loadgame) {
   game.iups[0]=ENify(game.iups[0])
   game.iups[1]=ENify(game.iups[1])
   game.iups[2]=ENify(game.iups[2])
+  game.incrementyDouble=ENify(game.incrementyDouble)
   for (let u in game.fractalEngine) {
     for (let v in game.fractalEngine[u]) {
       game.fractalEngine[u][v]=ENify(game.fractalEngine[u][v])
