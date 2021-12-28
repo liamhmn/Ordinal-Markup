@@ -1,8 +1,8 @@
 "use strict";
 var urlParams = new URLSearchParams(window.location.search);
 // Yeah, I know it's pretty unorganized at the moment
-let factorMult = 1;
-let bfactorMult = 1;
+let factorMult = 10000;
+let bfactorMult = 10000000000000000000000000000000000000000000000000000000000000000000;
 let succAutoMult = 1;
 let limAutoMult = 1;
 let RPloop = 0;
@@ -31,7 +31,7 @@ const factorShiftCosts = [
   1e21,
   1e100,
   1.095e272,
-  Infinity
+  8
 ];
 const factorCostExp = [2, 2, 2, 3, 3, 6, 30, 100];
 const bupUpgradeCosts = [
